@@ -34,4 +34,10 @@ class Student: Person
         super.init()
         
     }
+    override func display() {
+        print("Marks : \(marks)")
+        print("Total : \(total)")
+        print("Percentage : \(per)")
+        print("Result : \(result)")
+    }
 }

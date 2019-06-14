@@ -14,7 +14,10 @@ enum Gender{
     case MALE, FEMALE, OTHER
 }
 
-class Person{
+class Person: Display{
+    //var dummy: Int
+    
+  
 
    //private var _person_id: Int
     var person_id: Int?
@@ -32,11 +35,14 @@ class Person{
     //
     var full_name: String{ // computed property
         return "\(first_name) \(last_name)"
+        
     }
     
     var birthdate: Data?
     var gender: Gender
     var email: String?
+    var address: Address?
+    
     
     init() {
         print("init() of Person")
@@ -47,6 +53,18 @@ class Person{
         self.email = String()
         self.birthdate = Data()
         
+        ///self.dummy = 100
+        
     }
+    func display() {
+        print("Person Id: \(person_id)")
+        print("Person First Name: \(first_name)")
+        print("Person Last Name: \(last_name)")
+        print("Person Gender: \(gender)")
+        print("Person Email: \(email)")
+        print("Person Birthdate: \(birthdate)")
+        print("Person Address: \(address)")
+    }
+    
     
 }
